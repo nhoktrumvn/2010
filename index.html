@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NguyenHoangAnh</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background Bubbles -->
+    <div class="background-bubbles">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        <div class="bubble bubble-4"></div>
+        <div class="bubble bubble-5"></div>
+        <div class="bubble bubble-6"></div>
+        <div class="bubble bubble-7"></div>
+        <div class="bubble bubble-8"></div>
+        <div class="bubble bubble-9"></div>
+        <div class="bubble bubble-10"></div>
+        <div class="bubble bubble-11"></div>
+        <div class="bubble bubble-12"></div>
+        <div class="bubble bubble-13"></div>
+        <div class="bubble bubble-14"></div>
+        <div class="bubble bubble-15"></div>
+    </div>
+    
+    <!-- Light Rays Effect -->
+    <div class="light-rays">
+        <div class="light-ray ray-1"></div>
+        <div class="light-ray ray-2"></div>
+        <div class="light-ray ray-3"></div>
+        <div class="light-ray ray-4"></div>
+        <div class="light-ray ray-5"></div>
+    </div>
+    
+    <!-- Start Gate Page -->
+    <section id="gate" class="section active">
+        <div class="gate-container">
+            <div class="gate-card">
+                <h1 class="gate-title">Chúc mừng ngày 20/10</h1>
+                <p class="gate-subtitle">Nhấn để bắt đầu</p>
+                <button id="start-btn" class="start-button" aria-label="Start the celebration">
+                    Start
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Screen -->
+    <section id="loading" class="section">
+        <div class="loading-container">
+            <div class="loading-content">
+                <div class="progress-container">
+                    <div class="progress-pill">
+                        <div class="progress-fill" id="progress-fill"></div>
+                        <div class="progress-shimmer"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="progress-percentage">00%</span>
+                    </div>
+                </div>
+                <p id="loading-hint" class="loading-hint">Preparing petals & starlight...</p>
+            </div>
+        </div>
+        
+        <!-- Split reveal panels -->
+        <div class="split-panel split-top"></div>
+        <div class="split-panel split-bottom"></div>
+    </section>
+
+    <!-- Main App Scene -->
+    <section id="app" class="section">
+        <!-- Flower -->
+        <div id="flower-rain" class="flower-rain">
+            <div class="flower flower-1">🌸</div>
+            <div class="flower flower-2">🌺</div>
+            <div class="flower flower-3">🌻</div>
+            <div class="flower flower-4">🌷</div>
+            <div class="flower flower-5">🌹</div>
+            <div class="flower flower-6">🌼</div>
+            <div class="flower flower-7">🌸</div>
+            <div class="flower flower-8">🌺</div>
+            <div class="flower flower-9">🌻</div>
+            <div class="flower flower-10">🌷</div>
+            <div class="flower flower-11">🌹</div>
+            <div class="flower flower-12">🌼</div>
+            <div class="flower flower-13">🌸</div>
+            <div class="flower flower-14">🌺</div>
+            <div class="flower flower-15">🌻</div>
+            <div class="flower flower-16">🌷</div>
+            <div class="flower flower-17">🌹</div>
+            <div class="flower flower-18">🌼</div>
+            <div class="flower flower-19">🌸</div>
+            <div class="flower flower-20">🌺</div>
+        </div>
+
+        <!-- Heart-->
+        <div id="heart-rain" class="heart-rain">
+            <div class="heart heart-1">❤️</div>
+            <div class="heart heart-2">💖</div>
+            <div class="heart heart-3">💕</div>
+            <div class="heart heart-4">💗</div>
+            <div class="heart heart-5">💝</div>
+            <div class="heart heart-6">💘</div>
+            <div class="heart heart-7">💓</div>
+            <div class="heart heart-8">💞</div>
+            <div class="heart heart-9">💟</div>
+            <div class="heart heart-10">💜</div>
+            <div class="heart heart-11">💙</div>
+            <div class="heart heart-12">💚</div>
+            <div class="heart heart-13">💛</div>
+            <div class="heart heart-14">🧡</div>
+            <div class="heart heart-15">❤️</div>
+            <div class="heart heart-16">💖</div>
+            <div class="heart heart-17">💕</div>
+            <div class="heart heart-18">💗</div>
+            <div class="heart heart-19">💝</div>
+            <div class="heart heart-20">💘</div>
+        </div>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <!-- Intro Layer -->
+            <div id="intro-layer" class="intro-layer">
+                <h1 class="celebration-title"><span class="sparkle">✨</span> Chúc mừng ngày 20/10 <span class="sparkle">✨</span></h1>
+                <div class="countdown-container">
+                    <div class="countdown-badge" id="countdown-badge">
+                        <span id="countdown-number">4</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Envelope and Gift -->
+            <div id="envelope-container" class="envelope-container hidden">
+                <div class="envelope" id="envelope">
+                    <svg viewBox="0 0 100 70">
+                        <path d="M10,20 L50,45 L90,20 L50,10 Z" fill="rgba(255,182,193,0.9)" stroke="rgba(255,182,193,1)" stroke-width="1"/>
+                        <path d="M10,20 L50,35 L90,20" fill="rgba(255,192,203,0.8)"/>
+                    </svg>
+                </div>
+                <button id="gift-button" class="gift-button" aria-label="Open gift">
+                    <svg viewBox="0 0 60 60">
+                        <!-- Arrow pointing up -->
+                        <path d="M30,15 L40,35 L35,35 L35,45 L25,45 L25,35 L20,35 Z" fill="rgba(255,182,193,0.9)" stroke="rgba(255,182,193,1)" stroke-width="1"/>
+                        <!-- Arrow shaft -->
+                        <rect x="28" y="35" width="4" height="15" fill="rgba(255,182,193,0.9)"/>
+                        <!-- Arrow base -->
+                        <rect x="20" y="50" width="20" height="4" fill="rgba(255,182,193,0.9)"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Modal -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-panel">
+                <button id="close-modal-x" class="close-button-x" aria-label="Close modal">×</button>
+                <h1 class="modal-title">Chúc mừng ngày 20/10</h1>
+                <div class="modal-text">
+                    <p><strong>Tieu De 1:</strong>Noi dung 1</p>
+                    <p><strong>Signature1 :</strong></p>
+                </div>
+                <button id="close-modal" class="close-button" aria-label="Close modal">Đóng</button>
+            </div>
+        </div>
+        <div id="confetti-container" class="confetti-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
